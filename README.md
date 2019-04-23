@@ -1,6 +1,7 @@
 # dice
 
 [![Release](https://img.shields.io/github/release/gebv/go-dice.svg)](https://github.com/gebv/go-dice/releases/latest)
+[![CircleCI](https://circleci.com/gh/gebv/go-dice/tree/master.svg?style=svg)](https://circleci.com/gh/gebv/go-dice/tree/master)
 [![Go Report Card](https://goreportcard.com/badge/github.com/gebv/go-dice)](https://goreportcard.com/report/github.com/gebv/go-dice)
 [![GolangCI](https://golangci.com/badges/github.com/golangci/golangci-lint.svg)](https://golangci.com)
 
