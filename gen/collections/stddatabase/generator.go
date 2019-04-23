@@ -70,13 +70,5 @@ func (t *Generator) Gen(w io.Writer, icfg collections.GeneratorConfig, node pars
 	return nil
 }
 
-func mustStruct(node parse.Node) *ast.StructType {
-	str, ok := node.TypeSpec.Type.(*ast.StructType)
-	if !ok {
-		panic("expected *ast.StructType")
-	}
-	return str
-}
-
 var _ collections.Generator = (*Generator)(nil)
 var _ collections.GeneratorConfig = (*Config)(nil)
