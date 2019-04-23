@@ -1,0 +1,16 @@
+# tools
+required = [
+  "github.com/sqs/goreturns",
+]
+
+[prune]
+  go-tests = true
+  unused-packages = true
+
+[[constraint]]
+  name = "github.com/pkg/errors"
+  version = "0.8.1"
+
+[[constraint]]
+  name = "github.com/BurntSushi/toml"
+  version = "0.3.1"
