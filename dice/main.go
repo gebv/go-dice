@@ -71,7 +71,9 @@ func main() {
 				printGenRuleInfo(dstFile, g, node)
 				gen.Comments(dstFile, "dice: START code")
 				fmt.Fprintln(dstFile)
-				g.Gen(dstFile, g.Cfg, node)
+				if err := g.Gen(dstFile, g.Cfg, node); err != nil {
+					gen.Comments(dstFile, fmt.Sprintf("dice: ERROR %q", err))
+				}
 				fmt.Fprintln(dstFile)
 				gen.Comments(dstFile, "dice: END code")
 				fmt.Fprintln(dstFile)
@@ -148,7 +150,10 @@ func printGenRuleInfo(w io.Writer, grule *gen.GeneratorRule, node parse.Node) {
 	gen.Comments(w, fmt.Sprintf("File position: %q", node.NodePosition))
 	gen.Comments(w, fmt.Sprintf("Annotation name: %q", grule.AnnotaionName))
 	buff := new(bytes.Buffer)
-	json.NewEncoder(buff).Encode(grule.Cfg)
+	err := json.NewEncoder(buff).Encode(grule.Cfg)
+	if err != nil {
+		log.Fatal("Failed encode genrule config", err)
+	}
 	gen.Comments(w, "Rule config:")
 	gen.Comments(w, buff.String())
 	gen.Comments(w, "dice: END meta information")
