@@ -16,6 +16,7 @@ Code generator
 * [ ] stringer (basic type, enum, struct)
 * [ ] helper builder for struct with default values, with init map, chan
 * [ ] документация DTO объекта от его полей с комментариями к полям (doc, inline)
+* [ ] формирование DTO + фильтрация->валидация
 
 # Notes and magic, how's without her?
 
