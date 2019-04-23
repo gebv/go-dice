@@ -66,7 +66,7 @@ func TestNewGeneratorRule(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			got := NewGeneratorRule(tt.a)
-			if !reflect.DeepEqual(got.Name, tt.want.Name) {
+			if got.AnnotaionName != tt.want.AnnotaionName {
 				t.Errorf("NewGeneratorRule().Name = %v, want %v", got.AnnotaionName, tt.want.AnnotaionName)
 			}
 			if !reflect.DeepEqual(got.Cfg, tt.want.Cfg) {
