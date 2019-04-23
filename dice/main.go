@@ -20,6 +20,7 @@ import (
 )
 
 var VERSION = "???"
+var BUILDATE = "???"
 
 var fToolFormat = flag.String("tool-format", "goreturns", "Tool which format the code. Available: goreturns.")
 
@@ -27,6 +28,9 @@ func main() {
 	log.SetFlags(0)
 	log.SetPrefix("dice: ")
 	flag.Parse()
+
+	log.Println("Verions", VERSION)
+	log.Println("Build date", BUILDATE)
 
 	baseDir, err := os.Getwd()
 	if err != nil {
