@@ -22,7 +22,7 @@ func Parse(pathFile string) []Node {
 		log.Fatal("failed parse file", err)
 	}
 
-	ast.Print(fset, f)
+	// ast.Print(fset, f)
 
 	res := []Node{}
 

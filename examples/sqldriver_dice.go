@@ -2,7 +2,7 @@
 // File: /Users/gebv/go/src/github.com/gebv/go-dice/examples/sqldriver.go
 // Porcess with args: []
 // Package name: examples
-// Version: v0.1-da4bb29
+// Version: v0.1-33088f0
 package examples
 
 import (
